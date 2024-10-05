@@ -11,15 +11,43 @@ a {
     color: black;
 }
 body {
-    background-image: url();
+    height: 100%;
+    background-image: url(../img/backg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .container {
-    width: 375px;
+    width: 405px;
     margin: 0 auto;
+}
+header {
+    h2 {
+        color: #fff;
+    }
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 10px;
+    width: 527px;
+    height: 242px;
+    border-radius: 50px;
+    background: rgba(149, 0, 255, 0.393);
+    color: #fff;
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    .card_text {
+        p {
+            width: 200px;
+        }
+    }
 }
 footer {
     border-radius: 50px;
-    background: #000;
+    background: #0000008a;
     position: absolute;
     bottom: 0;
     right: 50%;
