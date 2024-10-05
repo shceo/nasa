@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    background: #000;
+    color: #fff;
+}
+.container {
+    width: 375px;
+    margin: 0 auto;
+}
+.footer {
+    position: absolute;
+    width: 375px;
+    height: 74px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.btn-home{
+    border: none;
+    background  : transparent;
+    color: #fff;
+    flex-direction: column;
+}
