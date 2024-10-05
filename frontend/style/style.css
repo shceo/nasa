@@ -13,27 +13,43 @@ a {
 body {
     height: 100%;
     background-image: url(../img/backg3.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .container {
-    width: 405px;
+    width: 1405px;
     margin: 0 auto;
 }
 header {
+    color: #fff;
     h2 {
         color: #fff;
     }
+    a {
+        color: #fff;
+        font-size: 20px;;
+    }
 }
-.card{
+.card_list {
     display: flex;
-    justify-content: space-between;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none;  /* IE и Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+.card_ {
+    margin: 20px;
+    display: flex;
+    align-items: center;
     padding: 10px;
-    width: 527px;
-    height: 242px;
+    width: 407px;
+    height: 202px;
     border-radius: 50px;
-    background: rgba(149, 0, 255, 0.393);
+    background: #13004f9e;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     color: #fff;
     img {
         width: 120px;
@@ -48,7 +64,7 @@ header {
 footer {
     border-radius: 50px;
     background: #0000008a;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 50%;
     width: 375px;
