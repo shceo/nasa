@@ -36,10 +36,8 @@ void main() async {
   // Обработчик статических файлов (если нужны, например, изображения)
   var staticHandler = createStaticHandler('public');
 
-  // Объединяем обработчики API и статических файлов
   var cascade = Cascade().add(apiHandler).add(staticHandler);
 
-  // Запуск сервера
   var server =
       await io.serve(pipeline.addHandler(cascade.handler), 'localhost', 8080);
   print('Server running on http://${server.address.host}:${server.port}');
