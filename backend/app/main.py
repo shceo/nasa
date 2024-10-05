@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-from app.api import events
 
 app = FastAPI()
 
-# Подключаем маршруты
-app.include_router(events.router)
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
+
+# Добавьте ваши маршруты из api/events.py, если необходимо

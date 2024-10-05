@@ -2,7 +2,7 @@ import httpx
 import os
 from fastapi import APIRouter
 
-NASA_API_KEY = os.getenv("NASA_API_KEY")  # Получаем ключ NASA API из переменных окружения
+NASA_API_KEY = os.getenv("8hZXdZ7rKPkWyjnsT33McdkB9WaeAebqD0OoHfR1")  # Получаем ключ NASA API из переменных окружения
 
 router = APIRouter()
 
