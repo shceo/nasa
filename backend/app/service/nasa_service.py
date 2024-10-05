@@ -1,7 +1,7 @@
 import httpx
 import os
 
-NASA_API_KEY = os.getenv("NASA_API_KEY")  # Получаем ключ NASA API из переменных окружения
+NASA_API_KEY = os.getenv("8hZXdZ7rKPkWyjnsT33McdkB9WaeAebqD0OoHfR1")  # Получаем ключ NASA API из переменных окружения
 
 async def get_upcoming_events():
     """Функция для получения данных о предстоящих космических событиях с NASA API."""
