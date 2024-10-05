@@ -31,12 +31,12 @@ header {
     }
 }
 .card_list {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 600px;
     overflow-x: hidden;
-
     -ms-overflow-style: none;  /* IE и Edge */
      scrollbar-width: none;  /* Firefox */
 }
@@ -48,7 +48,7 @@ header {
     width: 407px;
     height: 202px;
     border-radius: 50px;
-    background: #13004f9e;
+    backdrop-filter: blur(40px);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     color: #fff;
     img {
@@ -60,10 +60,46 @@ header {
             width: 200px;
         }
     }
+    border: 2px solid #ffffff42 ;
+}
+.details {
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+}
+.details_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.details_list {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid #ffffff42;
+    backdrop-filter: blur(40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 407px;
+    height: 400px;
+}
+.details_item {
+    color: #fff;
+    width: 109px;
+    height: 116px;
+    text-align: center;
+    h4 {
+        margin-top: -10px;
+        font-weight: bold;
+    }
 }
 footer {
-    border-radius: 50px;
-    background: #0000008a;
+    border: 2px solid #ffffff42;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
     position: fixed;
     bottom: 0;
     right: 50%;
@@ -75,6 +111,7 @@ footer {
     transform: translate(50%, 0);
 }
 .nav {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -85,4 +122,8 @@ footer {
     border: none;
     background  : transparent;
     flex-direction: column;
+    &:focus {
+        outline: none;
+        border: none;
+    }
 }
