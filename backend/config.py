@@ -1,2 +1,6 @@
-git config --global user.email "usmonkhonrakhimov@gmail.com"
-  git config --global user.name "Usmon41k"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+NASA_API_KEY = os.getenv("NASA_API_KEY")
