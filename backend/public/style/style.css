@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    height: 100vh;
+    background-image: url(../img/backg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 1405px;
+    margin: 0 auto;
+}
+header {
+    img {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 300px;
+        height: 300px;
+    }
+}
+.card_list {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE и Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+.card_ {
+    position: relative;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 407px;
+    height: 202px;
+    border-radius: 30px;
+    backdrop-filter: blur(40px);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    color: #fff;
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    .card_text {
+        p {
+            width: 200px;
+        }
+    }
+    .to_right {
+        border: none;
+        background: transparent;
+        position: absolute;
+        top: 60%;
+        right: 20px;
+        img {
+            width: 37px;
+            height: 37px;
+        }
+    }
+    border: 2px solid #ffffff42 ;
+}
+.details {
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+}
+.details_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.details_list {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid #ffffff42;
+    backdrop-filter: blur(40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 407px;
+    height: 400px;
+}
+.details_item {
+    color: #fff;
+    width: 109px;
+    height: 116px;
+    text-align: center;
+    h4 {
+        margin-top: -10px;
+        font-weight: bold;
+    }
+}
+footer {
+    border: 2px solid #ffffff42;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    width: 450px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, 0);
+}
+.main_nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 70px;
+}
+.btn-home{
+    color: #fff;
+    border: none;
+    background  : transparent;
+    flex-direction: column;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
