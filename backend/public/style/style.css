@@ -139,6 +139,7 @@ footer {
     }
     img {
         width: 20px;
+        margin-left: 10px;
     }
 }
 .calendar {
@@ -163,7 +164,20 @@ footer {
     }
 }
 .ivents{
+    
     margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weather {
+    height: 650px;
+    overflow-x: hidden;
+}
+.weather_ {
+
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
