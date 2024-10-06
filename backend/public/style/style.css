@@ -131,11 +131,51 @@ footer {
     border: none;
     background  : transparent;
     flex-direction: column;
-    &:focus {
-        outline: none;
-        border: none;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     img {
         width: 20px;
     }
+}
+.calendar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        color: #fff;
+        margin-top: 230px;    
+    }
+}
+.img_galaxy{
+    right: 50%;
+    top: 0;
+    transform: translate(50%, 0);
+    position: absolute; 
+    img {
+        width: 300px;
+        height: 300px;
+    }
+}
+.ivents{
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card_i {   
+    margin: 20px;
+    padding: 10px;
+    width: 70%;
+    border-radius: 30px;
+    backdrop-filter: blur(40px);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    color: #fff;
+    border: 2px solid #ffffff42 
 }
