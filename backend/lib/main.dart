@@ -11,10 +11,9 @@ Future<void> runServer() async {
   // Add CORS Middleware
   var corsMiddleware = corsHeaders(headers: {
     'Access-Control-Allow-Origin': '*', 
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Allowed methods
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 
   });
 
-  // Middleware for logging requests
   var pipeline = const Pipeline()
       .addMiddleware(corsMiddleware) // CORS Middleware
       .addMiddleware(logRequests());
@@ -27,11 +26,34 @@ Future<void> runServer() async {
       if (response.statusCode == 200) {
         return Response.ok(response.body,
             headers: {'Content-Type': 'application/json'});
-      } else {
+      } 
+      else {
         return Response.internalServerError(
             body: 'Error fetching data from NASA API');
       }
-    } else {
+    } 
+    else if (request.url.path == 'api/solar-flares') {
+      // Получаем текущую дату
+      final now = DateTime.now();
+      final formattedDate = '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+
+      // Параметры даты
+      final startDate = formattedDate;  // Начальная дата - текущая дата
+      final endDate = formattedDate;    // Конечная дата - текущая дата
+
+      var solarFlaresUrl = 'https://api.nasa.gov/DONKI/FLR?startDate=$startDate&endDate=$endDate&api_key=$nasaApi';
+      var response = await http.get(Uri.parse(solarFlaresUrl));
+      if (response.statusCode == 200) {
+         print(response);
+        return Response.ok(response.body,
+            headers: {'Content-Type': 'application/json'});
+      } 
+      else {
+        return Response.internalServerError(
+            body: 'Error fetching solar flares data from NASA API');
+      }
+    } 
+    else {
       return Response.notFound('Not Found');
     }
   };
@@ -47,7 +69,8 @@ Future<void> runServer() async {
       if (file.existsSync()) {
         return Response.ok(file.readAsBytesSync(),
             headers: {'Content-Type': 'image/x-icon'});
-      } else {
+      } 
+      else {
         return Response.notFound('Favicon not found');
       }
     }
@@ -62,4 +85,5 @@ Future<void> runServer() async {
   var server =
       await io.serve(pipeline.addHandler(cascade.handler), 'localhost', 8081);
   print('Server running on http://${server.address.host}:${server.port}');
+ 
 }
