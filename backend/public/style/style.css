@@ -74,7 +74,6 @@ header {
     border: 2px solid #ffffff42 ;
 }
 .details {
-    margin: 20px;
     color: #fff;
     text-align: center;
 }
@@ -85,7 +84,6 @@ header {
     flex-direction: column;
 }
 .details_list {
-    margin-top: 20px;
     padding: 15px;
     border-radius: 40px;
     border: 2px solid #ffffff42;
@@ -136,5 +134,8 @@ footer {
     &:focus {
         outline: none;
         border: none;
+    }
+    img {
+        width: 20px;
     }
 }
